@@ -29,6 +29,9 @@ body{
     background: #fff;
     border-radius: 10px;
 }
+.container.active{
+    height: 580px;
+}
 .wrapper{
     display: none;
     transition: all 0.35s linear;
@@ -105,7 +108,8 @@ body{
 .lr{
     display: flex;
     width: 100%;
-    gap: 72px;
+    /* justify-content: center; */
+    gap: 60px;
     margin-top: 20px;
 }
 .lr label{
@@ -125,11 +129,11 @@ body{
     cursor: pointer;
 }
 .ImgQuality{
-    display: none;
+    opacity: 0;
 }
 .quality .ImgQuality.active{
     cursor: pointer;
-    display: block;
+    opacity: 1;
     width: 60px;
     height: 25px;
     border-radius: 5px;
@@ -156,6 +160,8 @@ body{
 .credits{
     margin-top: 30px;
     color: #fff;
+    display: flex;
+    text-align: center;
 }
 .credits a{
     text-decoration: none;
@@ -167,11 +173,95 @@ a:hover{
 }
 
 
-/* media queries 
-@media (width<550px) {
+/* media queries  */
+@media (450px < width < 550px) {
     .container{
         width: 400px;
     }
+    .container.active{
+        height: 530px;
+    }
+    .container .img{
+        width: 350px;
+        height: 250px;
+    }
+    .container .img img{
+        width: 120px;
+    }
+    .img img.active{
+        width: 100%;
+        height: 100%;
+    }
+    .wh input{
+        width: 165px;
+    }
+    .wh span{
+    right: 118px;
+    top: -27px;
+    }
+    .wh span:nth-child(1){
+        left: 5px;
+    }
+    .credits{
+        flex-direction: column;
+    }
 
+}
 
-} */
+@media (0px < width < 450px) {
+    .container{
+        width: 300px;
+        height: 230px;
+        padding: 5px;
+    }
+    .container.active{
+        height: 470px;
+    }
+    .container .img{
+        width: 270px;
+        margin-top: 13px;
+        height: 200px;
+    }
+    .container .img img{
+        width: 120px;
+    }
+    .img img.active{
+        width: 100%;
+        height: 100%;
+    }
+    .wh input{
+        width: 120px;
+        font-size: 18px;
+    }
+    .wh{
+        margin-top: 35px;
+    }
+    .wh span{
+    right: 65px;
+    top: -27px;
+    }
+    .wh span:nth-child(1){
+        left: 2px;
+    }
+    .download{
+        margin-top: 20px;
+    }
+    .download button{
+        width: 100%;
+    }
+    .lr{
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+    .lr .lock,.quality{
+        text-align: left;
+        width: 100%;
+        text-align: left;
+        justify-content: left;
+        align-items: left;
+    }
+    .credits{
+        flex-direction: column;
+    }
+}
