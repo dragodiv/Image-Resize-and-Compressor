@@ -50,10 +50,18 @@ const RnD = () => {
     const a = document.createElement("a");
     const ctx = canvas.getContext("2d");
 
-    const ImgQuality = Quality.checked ? ImgQual.value : 1.0;
-
     canvas.width = Imgwidth.value;
     canvas.height = Imgheight.value;
+
+    const ImgQuality = Quality.checked ? ImgQual.value : 1.0;
+    if(ImgQual.classList.contains("active")){
+        canvas.width = Imgwidth.value*ImgQuality;
+        canvas.height = Imgheight.value*ImgQuality;
+    }else{
+        canvas.width = Imgwidth.value;
+        canvas.height = Imgheight.value;
+    }
+    
 
     ctx.drawImage(Img, 0, 0, canvas.width, canvas.height);
     a.href = canvas.toDataURL("images/jpeg", ImgQuality);
