@@ -8,6 +8,8 @@ Quality = document.getElementById("quality"),
 DownloadBtn = document.getElementById("download"),
 ImgQual = document.getElementById("ImgQuality");
 let ImgRatio;
+let container = document.getElementById("container");
+
 
 function Rcheck(){
     if(ImgQual.classList.contains("active")){
@@ -27,7 +29,7 @@ const loadFile = (e) => {
         UploadBox.querySelector("p").classList.add("hidden");
         Imgwidth.value = Img.naturalWidth;
         Imgheight.value = Img.naturalHeight;
-        document.getElementById("container").style.height = "580px";
+        container.classList.add("active");
         document.getElementById("wrapper").classList.add("active");
         ImgRatio = Img.naturalWidth / Img.naturalHeight;
         
