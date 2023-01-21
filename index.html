@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/upload.png" type="image/x-icon">
+
+    <!-- Primary Meta Tags -->
+    <title>Image Resize & Compressor by Divanshu Soni</title>
+    <meta name="title" content="Image Resize & Compressor by Divanshu Soni">
+    <meta name="description" content="Resize and Compress Your Images with this tool for free...
+    Made by Divanshu Soni">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dragodiv.github.io/Image-Resize-and-Compressor">
+    <meta property="og:title" content="Image Resize & Compressor by Divanshu Soni">
+    <meta property="og:description" content="Resize and Compress Your Images with this tool for free...
+    Made by Divanshu Soni">
+    <meta property="og:image" content="https://raw.githubusercontent.com/dragodiv/Image-Resize-and-Compressor/main/assets/Image%20Resize%20%26%20Compressor.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://dragodiv.github.io/Image-Resize-and-Compressor">
+    <meta property="twitter:title" content="Image Resize & Compressor by Divanshu Soni">
+    <meta property="twitter:description" content="Resize and Compress Your Images with this tool for free...
+    Made by Divanshu Soni">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/dragodiv/Image-Resize-and-Compressor/main/assets/Image%20Resize%20%26%20Compressor.png">
+
+    <title>Image Resize & Compressor by Divanshu Soni</title>
+</head>
+<body>
+    
+<div class="container" id="container">
+    <div class="img" id="img">
+        <img src="assets/upload.png">
+        <p>Browse File to Upload</p>
+        <input type="file" accept="image/*" hidden>
+    </div>
+    <div class="wrapper" id="wrapper">
+    <div class="wh">
+        <span>Width</span>
+        <input type="number" id="width">
+        <span>Height</span>
+        <input type="number" id="height">
+    </div>
+    <div class="lr">
+        <div class="lock">
+            <input type="checkbox" id="lock" checked><label for="lock">Lock aspect ratio</label>
+        </div>
+        <div class="quality">
+            <input type="checkbox" id="quality" onclick="Rcheck()">
+            <label for="quality">Reduce Quality</label>
+            <select id="ImgQuality" class="ImgQuality">
+                <option value="0.9">90%</option>
+                <option value="0.8">80%</option>
+                <option value="0.7">70%</option>
+                <option value="0.6">60%</option>
+                <option value="0.5">50%</option>
+                <option value="0.4">40%</option>
+                <option value="0.3">30%</option>
+            </select>
+        </div>
+    </div>
+    <div class="download">
+        <button id="download">Download Image</button>
+    </div>
+    </div>
+</div>
+<div class="credits">
+    <p>Image Resize & Compressor <a href="https://www.instagram.com/itsdivansh.u" target="_blank">Divanshu Soni</a></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
